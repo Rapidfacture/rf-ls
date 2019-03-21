@@ -17,7 +17,7 @@ console.log(ls('test/sample/*'));
   path: 'test/sample',
   file: 'logo_orange.png',
   name: 'logo_orange',
-  type: 'file',  // directory, file or link
+  type: 'file',  // directory, file, link, blockDevice, characterDevice, socket
   extension: 'png', // the extension if it is a file
   size: '16.5 kB',
   rights: '-rw-r--r--',
