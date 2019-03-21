@@ -1,4 +1,4 @@
-List file and directory information similar to the linux command `ls` in with node in an easy to use format.
+List file and directory information in an easy to use format. Similar to the linux command `ls`.
 
 ## Installation
 
