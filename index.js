@@ -40,10 +40,10 @@ module.exports = function () {
          nonegate: true
       }).forEach(function (file) {
          paths.shift();
-         let stat = fs.statSync(file);
+         let stat = fs.lstatSync(file); // do not follow symbolic links
          let mode = new statMode(stat);
          let type = mode.isFile() ? 'file' : 'directory';
-         if (mode.isSymbolicLink()) type = 'link';
+         if (stat.isSymbolicLink()) type = 'link';
          let extension = '';
          if (type === 'file') {
             extension = path.basename(file).split('.');
