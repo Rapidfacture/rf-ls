@@ -41,14 +41,39 @@ module.exports = function () {
       }).forEach(function (file) {
          paths.shift();
          let stat = fs.lstatSync(file); // do not follow symbolic links
-         let mode = new statMode(stat);
-         let type = mode.isFile() ? 'file' : 'directory';
+
+         /* doc to "stat"
+         from: https://stackoverflow.com/questions/8582105/having-trouble-understanding-how-fs-stat-works
+
+         dev: ID of the device containing the file
+         mode: file protection
+         nlink: number of hard links to the file
+         uid: user ID of the file’s owner.
+         gid: group ID of the file’s owner.
+         rdev: device ID if the file is a special file.
+         blksize: block size for file system I/O.
+         ino: File inode number. An inode is a file system data structure that -
+         stores information about a file.
+         size: file total size in bytes.
+         blocks: number of blocks allocated for the file.
+         atime: date object representing the file’s last access time.
+         mtime: date object representing the file’s last modification time.
+         ctime: date object representing the last time the file’s inode was cha
+         */
+
+         let type = stat.isFile() ? 'file' : 'directory';
          if (stat.isSymbolicLink()) type = 'link';
+         if (stat.isBlockDevice()) type = 'blockDevice';
+         if (stat.isCharacterDevice()) type = 'characterDevice';
+         if (stat.isSocket()) type = 'socket';
          let extension = '';
          if (type === 'file') {
             extension = path.basename(file).split('.');
             extension = extension[extension.length - 1];
          }
+
+         let mode = new statMode(stat);
+
          let self = {
             full: file,
             path: path.dirname(file),
