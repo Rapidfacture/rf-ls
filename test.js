@@ -8,10 +8,8 @@ let dirPath = 'test/sample/*';
 
 
 log('\n \n test ls(dirPath) \n');
-let allFiles = ls(dirPath);
-for (var file of allFiles) {
-   console.log(file);
-}
+console.log(ls(dirPath));
+
 
 log('\n \n test ls(dirPath, parserFunc) \n');
 ls(
