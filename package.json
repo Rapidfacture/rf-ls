@@ -4,7 +4,7 @@
    "author": {
       "name": "Felix Furtmayr"
    },
-   "version": "0.1.3",
+   "version": "0.1.5",
    "main": "index.js",
    "scripts": {
       "prepublish": "npm test",
