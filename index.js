@@ -82,6 +82,7 @@ module.exports = function () {
             type: type,
             extension: extension,
             size: prettysize(stat.size),
+            sizeBytes: stat.size,
             rights: mode.toString(),
             owner: { ...mode.owner },
             group: { ...mode.group },
