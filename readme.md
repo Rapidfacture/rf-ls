@@ -20,6 +20,7 @@ console.log(ls('test/sample/*'));
   type: 'file',  // directory, file, link, blockDevice, characterDevice, socket
   extension: 'png', // the extension if it is a file
   size: '16.5 kB',
+  sizeBytes: 16929,
   rights: '-rw-r--r--',
   owner: { read: true, write: true, execute: false },
   group: { read: true, write: false, execute: false },
@@ -37,6 +38,7 @@ console.log(ls('test/sample/*'));
   type: 'file',
   extension: 'svg',
   size: '1.2 kB',
+  sizeBytes: 1197,
   rights: '-rw-r--r--',
   owner: { read: true, write: true, execute: false },
   group: { read: true, write: false, execute: false },
@@ -55,9 +57,9 @@ console.log(ls('test/sample/*'));
 
 ## ToDo
 
-NOTE: The module is forked from npm package "ls" which had following arguments - currently only the "path" is working.
-Please help to fix this. Further wished options: Move recursiv through folders, select only certain filetypes with rgex.
-Also some tests would be nice
+* module is forked from npm package "ls"; currently only the first argument "path" is working. Further options might be : Move recursive through folders, select only certain filetypes with regex.
+* Built in an async version.
+* better tests
 
 from the 'ls' Readme:
 
