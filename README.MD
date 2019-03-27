@@ -19,7 +19,8 @@ List file and directory information in an easy to use format. Similar to the lin
 
 [npm-ver-img]:https://img.shields.io/npm/v/rf-ls.svg?style=flat-square
 [npm-dl-img]:https://img.shields.io/npm/dm/rf-ls.svg?style=flat-square
-[npm-lc-img]:https://img.shields.io/npm/l/rf-ls?style=flat-square
+[npm-lc-img]:https://img.shields.io/npm/l/rf-ls.svg?style=flat-square
+
 
 [npm-url]:https://www.npmjs.com/package/rf-ls
 
