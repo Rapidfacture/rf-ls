@@ -83,11 +83,11 @@ module.exports = function () {
             extension: extension,
             size: prettysize(stat.size),
             sizeBytes: stat.size,
+            blksize: stat.blksize,
             rights: mode.toString(),
             owner: { ...mode.owner },
             group: { ...mode.group },
             others: { ...mode.others },
-            blksize: stat.blksize,
             accessTime: stat.atime,
             modifyTime: stat.mtime, // modified
             changeTime: stat.ctime,

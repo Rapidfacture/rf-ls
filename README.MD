@@ -1,4 +1,29 @@
+# rf-ls
+
 List file and directory information in an easy to use format. Similar to the linux command `ls`.
+
+[![NPM version][npm-ver-img]][npm-url]
+[![NPM downloads][npm-dl-img]][npm-url]
+[![NPM license][npm-lc-img]][npm-url]
+
+[![Dependency Status][dep-img]][dep-url]
+[![Dev Dependency Status][dev-dep-img]][dev-dep-url]
+
+
+[dev-dep-img]:https://img.shields.io/david/dev/RAPIDFACTURE/rf-ls.svg?style=flat-square
+[dev-dep-url]:https://david-dm.org/RAPIDFACTURE/rf-ls
+
+[dep-img]:https://img.shields.io/david/RAPIDFACTURE/rf-ls.svg?style=flat-square
+[dep-url]:https://david-dm.org/poppinlp/grunt-htmlhint-plus
+
+
+[npm-ver-img]:https://img.shields.io/npm/v/rf-ls.svg?style=flat-square
+[npm-dl-img]:https://img.shields.io/npm/dm/rf-ls.svg?style=flat-square
+[npm-lc-img]:https://img.shields.io/npm/l/rf-ls?style=flat-square
+
+[npm-url]:https://www.npmjs.com/package/rf-ls
+
+
 
 ## Installation
 
@@ -21,11 +46,11 @@ console.log(ls('test/sample/*'));
   extension: 'png', // the extension if it is a file
   size: '16.5 kB',
   sizeBytes: 16929,
+  blksize: 4096,
   rights: '-rw-r--r--',
   owner: { read: true, write: true, execute: false },
   group: { read: true, write: false, execute: false },
   others: { read: true, write: false, execute: false },
-  blksize: 4096,
   accessTime: '2019-03-21T10:33:09.622Z',
   modifyTime: '2019-02-21T15:49:57.000Z',
   changeTime: '2019-03-21T10:33:09.618Z',
@@ -39,11 +64,11 @@ console.log(ls('test/sample/*'));
   extension: 'svg',
   size: '1.2 kB',
   sizeBytes: 1197,
+  blksize: 4096,
   rights: '-rw-r--r--',
   owner: { read: true, write: true, execute: false },
   group: { read: true, write: false, execute: false },
   others: { read: true, write: false, execute: false },
-  blksize: 4096,
   accessTime: '2019-03-21T10:33:09.810Z',
   modifyTime: '2019-02-21T15:49:58.000Z',
   changeTime: '2019-03-21T10:33:09.618Z',
